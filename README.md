@@ -58,7 +58,7 @@ The supervisor is an LLM router: it picks the analyzer, the file controller, or 
 
 ## Quickstart
 
-Prerequisites: Python 3.10 or newer (the install fails on 3.9) and an OpenAI API key.
+Prerequisites: Python 3.12 or newer (older versions fail at import) and an OpenAI API key.
 
 1. Install the dependencies: `pip install -r requirements.txt`
 2. Create a `.env` file in the repo root:

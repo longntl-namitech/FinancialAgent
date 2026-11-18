@@ -279,7 +279,7 @@ def pipeline() -> Sketch:
     s.text(1062, 440, "FINISH", 22)
 
     s.arrow((1050, 702), (1050, 770), (350, 770), (350, 404))
-    s.text(380, 752, "SSE stream: think + msg events", 24)
+    s.text(380, 752, "SSE stream: msg from the Responser, think from every stage", 24)
 
     s.box(1260, 500, 330, 260, "yellow", "Analyzer", ["ReAct agent, tools:", "get_uploaded_files", "read_file"], "search")
     s.box(1610, 500, 330, 260, "yellow", "File controller", ["ReAct agent, tools:", "get_uploaded_files", "process_file", "PDF to text, LLM OCR"], "doc")
@@ -301,7 +301,7 @@ def layout() -> Sketch:
     s = Sketch(2000, 990, seed=12)
     s.heading(
         "Repository layout",
-        "financial_agent/ is the whole package. demo/ calls the API over HTTP and reads settings from core/.",
+        "financial_agent/ is the whole package. demo/ calls the API over HTTP, writes uploads to disk and reads settings from core/.",
     )
     s.frame(40, 150, 1500, 700, "financial_agent/")
     s.box(70, 230, 300, 195, "green", "app.py", ["creates the FastAPI app", "mounts the routes"])

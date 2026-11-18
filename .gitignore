@@ -67,7 +67,7 @@ Thumbs.db       # Windows
 # Miscellaneous
 tags
 
-models
+/models
 
 .DS_Store
 
