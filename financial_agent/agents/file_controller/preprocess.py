@@ -1,4 +1,4 @@
-from logger import logger
+from financial_agent.core.logger import logger
 import os
 import glob
 import pymupdf

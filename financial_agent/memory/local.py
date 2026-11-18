@@ -2,15 +2,15 @@ import json
 from pathlib import Path
 from typing import List, Optional, Union
 from uuid import uuid4
-from config import configs
+from financial_agent.core.config import configs
 from langchain_core.chat_history import (
     BaseChatMessageHistory,
 )
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_core.runnables import RunnableConfig
 
-from model.message import Message
-from utils import get_user_id, get_session_id, get_message_id
+from financial_agent.core.models.message import Message
+from financial_agent.core.utils import get_user_id, get_session_id, get_message_id
 from loguru import logger
 
 class LocalMemory():

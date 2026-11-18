@@ -3,13 +3,13 @@ import uvicorn
 from fastapi import FastAPI, Depends
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
-from config import configs
+from financial_agent.core.config import configs
 
-from routers.chat import chat_router
-from routers.health import health_router
-from logger import logger
+from financial_agent.api.chat import chat_router
+from financial_agent.api.health import health_router
+from financial_agent.core.logger import logger
 
-from dependencies.auth import get_api_key
+from financial_agent.api.auth import get_api_key
 
 debug = True
 dependencies = [Depends(get_api_key)]
@@ -52,7 +52,7 @@ app = create_app()
 def main():
     logger.info("Starting VPBank Financial Agent Server...")
     uvicorn.run(
-        "app:app",
+        "financial_agent.app:app",
         host="0.0.0.0",
         port=8000,
         reload=True if debug else False,

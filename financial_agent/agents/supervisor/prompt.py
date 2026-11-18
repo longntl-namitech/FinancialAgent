@@ -1,10 +1,10 @@
 import json
 from langchain_core.prompts import ChatPromptTemplate
 
-from graph.file_controler.tools import tools as file_control_tools
-from graph.analyzer.tools import tools as analyzer_tools
+from financial_agent.agents.file_controller.tools import tools as file_control_tools
+from financial_agent.agents.analyzer.tools import tools as analyzer_tools
 
-from logger import logger
+from financial_agent.core.logger import logger
 
 agent_members = {
     "file_controler": {

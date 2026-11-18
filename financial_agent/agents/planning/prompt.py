@@ -1,5 +1,5 @@
 from langchain_core.prompts import ChatPromptTemplate
-from graph.supervisor.prompt import members, tools_description
+from financial_agent.agents.supervisor.prompt import members, tools_description
 
 PLANNING_PROMPT = f"""
 # Role

@@ -1,7 +1,7 @@
 import json
 from langchain_core.runnables import RunnableConfig
 
-from model.message import Message
+from financial_agent.core.models.message import Message
 
 def convert_to_sse_format(payload):
     return f"data: {json.dumps(payload)}\n\n"

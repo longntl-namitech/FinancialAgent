@@ -3,13 +3,13 @@ from fastapi.responses import StreamingResponse
 
 from langchain_core.messages import AIMessage
 
-from graph import app as vpbank_agent
-from model.chat_request import ChatRequest
-from model.message import Message
+from financial_agent.agents import app as vpbank_agent
+from financial_agent.core.models.chat_request import ChatRequest
+from financial_agent.core.models.message import Message
 
 import uuid
-from utils import convert_to_sse_format
-from logger import logger
+from financial_agent.core.utils import convert_to_sse_format
+from financial_agent.core.logger import logger
 
 # Create a router instance
 chat_router = APIRouter()

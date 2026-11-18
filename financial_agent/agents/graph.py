@@ -1,7 +1,7 @@
 from langgraph.graph import END, StateGraph, START
 
-from graph.state import State
-from graph import (
+from financial_agent.agents.state import State
+from financial_agent.agents import (
     memory_graph,
     planning_graph,
     supervisor_graph,
@@ -9,9 +9,9 @@ from graph import (
     analyzer_graph,
     response_agent
 )
-from graph.memory.graph import update_memory
+from financial_agent.agents.memory.graph import update_memory
 
-from logger import logger
+from financial_agent.core.logger import logger
 
 graph = StateGraph(State)
 graph.add_node("memory", memory_graph)

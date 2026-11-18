@@ -2,11 +2,11 @@ from langchain_openai import ChatOpenAI
 from langgraph.types import Command
 from langchain_core.messages import HumanMessage
 
-from graph.state import State
-from graph.planning.prompt import planning_system_prompt
+from financial_agent.agents.state import State
+from financial_agent.agents.planning.prompt import planning_system_prompt
 
-from config import configs
-from logger import logger
+from financial_agent.core.config import configs
+from financial_agent.core.logger import logger
 
 planning_agent = planning_system_prompt | ChatOpenAI(model=configs.llm_model_name, temperature=0)
 

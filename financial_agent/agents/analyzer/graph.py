@@ -1,15 +1,15 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from langgraph.prebuilt import create_react_agent
-from graph.state import State
+from financial_agent.agents.state import State
 from langgraph.types import Command
 
 from typing import Literal
 
-from graph.state import State
-from graph.analyzer.prompt import analyzer_prompt
-from graph.analyzer.tools import tools
-from config import configs
+from financial_agent.agents.state import State
+from financial_agent.agents.analyzer.prompt import analyzer_prompt
+from financial_agent.agents.analyzer.tools import tools
+from financial_agent.core.config import configs
 
 
 model = ChatOpenAI(

@@ -4,10 +4,10 @@ from typing_extensions import TypedDict
 from langchain_openai import ChatOpenAI
 from langgraph.types import Command
 
-from graph.state import State
-from graph.supervisor.prompt import agent_members, supervisor_prompt
-from config import configs
-from logger import logger
+from financial_agent.agents.state import State
+from financial_agent.agents.supervisor.prompt import agent_members, supervisor_prompt
+from financial_agent.core.config import configs
+from financial_agent.core.logger import logger
 
 
 model = ChatOpenAI(
